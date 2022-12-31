@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    
+    
+    <div class="all">
+      
+        <div class="menu">
+      
+
+    
+      <button id="cl">Today is<span>??</span></button>
+      <img src="" id="kh">
+    </div>
+    
+    <div class="cover">
+      <img id="ph" src="gif04.gif">
+      <h2 id="hello"></h2>
+    </div>
+
+      
+    </div>
+  
+    
+  </body>
+  <style>
+  
+  .all{
+    height: auto;
+    width:100%;
+  }
+  .menu img{
+    width:100%;
+    height: 300px;
+    display: none;
+  }
+    .menu{
+      
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      justify-content: right;
+      align-items: right;
+      text-align: right;
+    }
+    
+    .cover img{
+      width:100%;
+      height: 320px;
+      display: none;
+    }
+    
+    .cover{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items:center;
+    }
+    button{
+      font-size:1.6rem;
+      font-weight:700;
+      color:#000;
+      background-color: #f99dec;
+      width:200px;
+      height: 50px;
+      border-radius:80px;
+    }
+    span{
+      color:#00ffc6;
+    }
+    .all h1{
+      color:purple;
+      font-weight: bolder;
+      font-size: 1.5rem;
+    }
+    .kk{
+      animation-name:anim;
+      animation-iteration-count: 23;
+      animation-duration: 3s;
+      animation-delay: 5s;
+      background-image: url(gif01.gif);
+    }
+    
+    @keyframes anim{
+      0%{
+        background-image: url(gif01.gif);
+      }
+      
+      20%{
+        height: 100vh;
+        background-image: url(gif04.gif);
+      }
+    }
+    
+    body{
+      background-color:#e3ebf7 ;
+    }
+    
+    
+    
+  </style>
+  
+  
+  <script>
+  var k=document.getElementById("kh");
+  var h=document.getElementById("ph");
+    document.getElementById("cl").addEventListener("click",click);
+    function click(){
+      
+      h.style="display:block";
+      
+     var p= document.getElementById("cl");
+     p.style="width:100%;height:70px;background-color:green;color:White"
+     p.innerHTML="Happy New Year"
+      setTimeout(()=>{
+     document.getElementById("ph").style="display:none";
+     
+     
+   },3000)
+      setTimeout(function (){
+       var audio=new Audio("Tune.mp3");
+     
+     audio.play();
+     h.src="gif02.gif";
+       
+    
+     },1300)
+    
+    k.src="gif03.gif";
+    k.style="display:block";
+    document.getElementById("hello").innerHTML="Happy New Year🥰"
+    document.querySelector(".all").classList.add("kk");
+    }
+    
+    
+   
+   
+    
+   
+   
+   
+   
+     
+     
+     
+   
+   
+ 
+   
+   
+  </script>
+</html>
